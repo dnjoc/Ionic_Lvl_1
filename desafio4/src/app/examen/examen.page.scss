@@ -1,0 +1,69 @@
+ion-header{
+  ion-toolbar{
+    --background: #00548F;
+    ion-buttons{
+      ion-button{
+        ion-icon{
+          color: white;
+        }
+      }
+    }
+  }
+}
+.imagen{
+  width: 90px !important;
+  height: 70px !important;
+}
+#container {
+  color: black;
+  text-align: center;
+  background-color: white;
+  ion-card{
+    text-align: start;
+    background-color: white;
+    color: black;
+    ion-card-title{
+      color: black;
+    }
+    ion-card-content{
+      ion-radio-group{
+        ion-radio{
+          --color: rgb(100, 100, 217);
+        }
+      }
+    }
+  }
+}
+ion-radio.ios::part(container) {
+  width: 20px;
+  height: 20px;
+
+  border: 2px solid rgb(100, 100, 217);
+  border-radius: 4px;
+}
+ion-content{
+  --background: white;
+}
+ion-footer{
+  ion-toolbar{
+    --background: #ffffff;
+    ion-buttons{
+      ion-button{
+        --color: white;
+        --border-radius: 10px;
+        --padding-top: 20px;
+        --padding-bottom: 20px;
+      }
+    }
+  }
+}
+
+.anterior{
+  --background: gray;
+}
+.siguiente{
+  --background: orange;
+}
+.finalizar{
+  --background: green;
+}

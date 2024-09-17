@@ -1,0 +1,58 @@
+<ion-header >
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+    <ion-img slot="start" class="imagen"
+  src="https://app.cadif1.com/img/template/logo-cadi-blanco.svg"
+  alt="logo Cadi"></ion-img>
+</ion-button>
+</ion-buttons>
+<ion-buttons slot="end">
+  <ion-button id="open-action-sheet2">
+    <ion-icon size="large" name="add-circle-outline"></ion-icon>
+  </ion-button>
+</ion-buttons>
+  </ion-toolbar>
+<ion-action-sheet
+  trigger="open-action-sheet2"
+  header="Opciones"
+  [buttons]="actionSheetButtons2"
+></ion-action-sheet>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+  <ion-text>
+    <h3>Pregunta {{ indice + 1 }} de {{ preguntas.length }}</h3>
+  </ion-text>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ preguntas[indice].enunciado }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-radio-group>
+        <ion-radio labelPlacement="end">{{ preguntas[indice].opciones[0] }}</ion-radio><br />
+        <ion-radio labelPlacement="end">{{ preguntas[indice].opciones[1] }}</ion-radio><br />
+        <ion-radio labelPlacement="end">{{ preguntas[indice].opciones[2] }}</ion-radio><br />
+        <ion-radio labelPlacement="end">{{ preguntas[indice].opciones[3] }}</ion-radio>
+      </ion-radio-group>
+    </ion-card-content>
+  </ion-card>
+</div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button class="anterior" (click)="restar()" [disabled]="indice === 0">Anterior</ion-button>
+    </ion-buttons>
+
+    <ion-buttons *ngIf="indice<4" slot="end">
+      <ion-button class="siguiente" (click)="sumar()">Siguiente</ion-button>
+    </ion-buttons>
+    <ion-buttons *ngIf="indice===4" slot="end">
+      <ion-button class="finalizar" (click)="presentAlert()">Finalizar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

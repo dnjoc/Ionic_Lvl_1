@@ -1,0 +1,100 @@
+<ion-header >
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+    <ion-img slot="start" class="imagen"
+  src="https://app.cadif1.com/img/template/logo-cadi-blanco.svg"
+  alt="logo Cadi"></ion-img>
+</ion-button>
+</ion-buttons>
+<ion-buttons slot="end">
+  <ion-button id="open-action-sheet">
+    <ion-icon size="large" name="add-circle-outline"></ion-icon>
+  </ion-button>
+  <ion-button id="open-alert">
+    <ion-icon size="large" name="newspaper-outline"></ion-icon>
+  </ion-button>
+  <ion-button routerLink="/iniciosesion">
+    <ion-avatar class="avatarImg">
+      <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+    </ion-avatar>
+  </ion-button>
+</ion-buttons>
+  </ion-toolbar>
+  <ion-alert
+  trigger="open-alert"
+  header="Noticias resaltantes"
+  subHeader="Lo ultimo y mas esperado"
+  message="Continua asistiendo a clases para poder personalizar, navegando a otra pagina.!"
+  [buttons]="alertButtons"
+></ion-alert>
+<ion-action-sheet
+  trigger="open-action-sheet"
+  header="Opciones"
+  [buttons]="actionSheetButtons"
+></ion-action-sheet>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header> -->
+
+  <div id="container">
+
+    <ion-card *ngFor="let card of videos" >
+      <img class="imgPersonaje" alt="Silhouette of mountains" [src]="card.urlImg" />
+         <ion-card-content>
+          <ion-chip (click)='setOpen(true, "Estas viendo: "+card.title)'>
+            <ion-icon name="logo-youtube"></ion-icon>
+            <ion-label class="textoDescripcion">{{card.title}}</ion-label>
+          </ion-chip>
+
+          <ion-chip>
+            <ion-avatar>
+              <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+            </ion-avatar>
+            <ion-label class="textoDescripcion">Eduardo Mejia</ion-label>
+          </ion-chip>
+
+          <ion-chip [id]="card.id">
+            <ion-icon name="reader-outline"></ion-icon>
+            <ion-label class="textoDescripcion">{{card.description}}</ion-label>
+          </ion-chip>
+      </ion-card-content>
+      <ion-alert
+  [trigger]="card.id"
+  header="Acabas de dar click en el video:"
+  [subHeader]="card.title"
+  message="Continua viendo el video para poder aprender mas sobre, Ionic.!"
+  [buttons]="alertButtons"
+></ion-alert>
+    </ion-card>
+  </div>
+
+</ion-content>
+<ion-footer>
+
+    <ion-segment value="document-attach-outline">
+      <ion-segment-button (click)='setOpen(true, "Material")' value="document-attach-outline">
+        <ion-label>Material</ion-label>
+        <ion-icon name="document-attach-outline"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button (click)='setOpen(true, "Videos")' value="logo-youtube">
+        <ion-label>Videos</ion-label>
+        <ion-icon name="logo-youtube"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button (click)='setOpen(true, "Desafios")' value="trail-sign-outline">
+        <ion-label>Desafios</ion-label>
+        <ion-icon name="trail-sign-outline"></ion-icon>
+      </ion-segment-button>
+    </ion-segment>
+    <ion-toast
+    [isOpen]="isToastOpen"
+    [message]= "toastMessage"
+    [duration]="5000"
+    (didDismiss)='setOpen(false, "")'
+  ></ion-toast>
+</ion-footer>
