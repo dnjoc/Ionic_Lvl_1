@@ -1,0 +1,171 @@
+<ion-header [translucent]="true">
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar class="nav">
+        <ion-buttons slot="end">
+          <ion-menu-button class="mostrarMenu"></ion-menu-button>
+        </ion-buttons>
+        <ion-title>CadiF1</ion-title>
+      </ion-toolbar>
+      <ion-toolbar class="nav2">
+        <div >
+          <div>
+            <ion-title class="tituloNav">Cadi F1</ion-title>
+          </div>
+          <div>
+            <ion-text class="textoNav">
+              <h5>LA ACADEMIA</h5>
+            </ion-text>
+            <ion-text class="textoNav">
+              <h5>CERTIFICACION</h5>
+            </ion-text>
+            <ion-text class="textoNav">
+              <h5>EMPLEOS</h5>
+            </ion-text>
+            <ion-text class="textoNav">
+              <h5>CONTACTO</h5>
+            </ion-text>
+            <ion-text class="textoNav">
+              <h5>INICIAR SESION</h5>
+            </ion-text>
+          </div>
+        </div>
+      </ion-toolbar>
+    </ion-header>
+  </div>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-menu side="end" contentId="main-content">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>CADI F1</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-text color="primary">
+        <h5>LA ACADEMIA</h5>
+      </ion-text>
+      <ion-text color="primary">
+        <h5>CERTIFICACION</h5>
+      </ion-text>
+      <ion-text color="primary">
+        <h5>EMPLEOS</h5>
+      </ion-text>
+      <ion-text color="primary">
+        <h5>CONTACTO</h5>
+      </ion-text>
+      <ion-text color="primary">
+        <h5>INICIAR SESION</h5>
+      </ion-text>
+    </ion-content>
+  </ion-menu>
+  
+  <swiper-container
+  [modules]="swiperModules"
+   #swiper
+   (afterinit)="swiperReady()"
+  (slidechange)="swiperSlideChanged($event)"
+   [loop]="true"
+   [autoplay]="{delay: 10000}" 
+   [pagination]="true"
+   [navigation]="true">
+     <swiper-slide class="swiper-slide">
+      <ion-img src="https://cadif1.com/img/sliders/abc6f-crea-tu-propia-aplicacion-slider.png"></ion-img>
+     </swiper-slide>
+     <swiper-slide class="swiper-slide">
+      <ion-img src="https://cadif1.com/img/sliders/0dfed-cti-sliders.png"></ion-img>
+     </swiper-slide>
+     <swiper-slide class="swiper-slide">
+      <ion-img src="https://cadif1.com/img/sliders/08af0-taller-de-fotogafia-slider.png"></ion-img>
+     </swiper-slide>
+     <swiper-slide class="swiper-slide">
+      <ion-img src="https://cadif1.com/img/sliders/40cc7-diseno-grafico-digital.png"></ion-img>
+     </swiper-slide>
+     <swiper-slide class="swiper-slide">
+      <ion-img src="https://cadif1.com/img/sliders/e0bd7-excel.png"></ion-img>
+     </swiper-slide>
+   </swiper-container>
+
+  <div class="superContFooter2">
+   <div id="containerFooter2">
+    <div class="contenedorIconF2">
+      <ion-thumbnail>
+        <img class="iconosFooter2" src="https://cadif1.com/img/servicios/iconos/carrera-informaticas.png" />
+      </ion-thumbnail>
+    <ion-text style="color: white;">
+      <h3>Carreras Tecnicas</h3>
+      <p>Formate integral y profesionalmente en un area de estudio y preperate para trabajar.</p>
+    </ion-text>
+  </div>
+  <div class="contenedorIconF2">
+    <ion-thumbnail>
+      <img class="iconosFooter2" src="https://cadif1.com/img/servicios/iconos/cursos-presenciales.png" />
+    </ion-thumbnail>
+    <ion-text style="color: white;">
+      <h3>Cursos Especializados</h3>
+      <p>Hazte un experto en los temas relacionados con la computacion y la informatica.</p>
+    </ion-text>
+  </div>
+    <div class="contenedorIconF2">
+      <ion-thumbnail>
+        <img class="iconosFooter2" src="https://cadif1.com/img/servicios/iconos/asesoria-tecnicas.png" />
+      </ion-thumbnail>
+    <ion-text style="color: white;">
+      <h3>Asesorias Tecnicas</h3>
+      <p>Resuelve los problemas que tengas en el desarrollo de tus proyectos.</p>
+    </ion-text>
+  </div>
+    <div class="contenedorIconF2">
+      <ion-thumbnail>
+        <img class="iconosFooter2" src="https://cadif1.com/img/servicios/iconos/alquiler-salones.png" />
+      </ion-thumbnail>
+      <ion-text style="color: white;">
+        <h3>Alquiler de Salones</h3>
+        <p>Contamos con una infraestructura adaptada a tus necesidades con la mejor tecnologia.</p>
+      </ion-text>
+    </div>
+  </div>
+</div>
+
+</ion-content>
+
+<ion-footer collapse="fade">
+  <ion-toolbar class="contenedorFooter">
+    <div id="containerFooter">
+    <div class="contenedorIconF">
+      <ion-thumbnail>
+        <img class="iconosFooter" src="https://cadif1.com/img/servicios/iconos/carrera-informaticas.png" />
+      </ion-thumbnail>
+    <ion-text style="color: white;">
+      <h3>Carreras</h3>
+    </ion-text>
+  </div>
+  <div class="contenedorIconF">
+    <ion-thumbnail>
+      <img class="iconosFooter" src="https://cadif1.com/img/servicios/iconos/cursos-presenciales.png" />
+    </ion-thumbnail>
+    <ion-text style="color: white;">
+      <h3>Cursos</h3>
+    </ion-text>
+  </div>
+    <div class="contenedorIconF">
+      <ion-thumbnail>
+        <img class="iconosFooter" src="https://cadif1.com/img/servicios/iconos/asesoria-tecnicas.png" />
+      </ion-thumbnail>
+    <ion-text style="color: white;">
+      <h3>Asesorias</h3>
+    </ion-text>
+  </div>
+    <div class="contenedorIconF">
+      <ion-thumbnail>
+        <img class="iconosFooter" src="https://cadif1.com/img/servicios/iconos/alquiler-salones.png" />
+      </ion-thumbnail>
+      <ion-text style="color: white;">
+        <h3>Salones</h3>
+      </ion-text>
+    </div>
+  </div>
+  </ion-toolbar>
+
+</ion-footer>
