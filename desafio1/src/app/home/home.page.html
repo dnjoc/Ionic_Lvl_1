@@ -1,0 +1,227 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+    <ion-img slot="start" class="imagen"
+  src="https://cadif1.com/img/template/logo-cadif1.svg"
+  alt="logo Cadi"></ion-img>
+</ion-button>
+</ion-buttons>
+  <ion-buttons slot="end">
+    <ion-button>
+      <div class="contenedorIconMenu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+        </svg>
+      </div>
+    </ion-button>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="backgroundContent" [fullscreen]="true">
+<!-- 
+
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+      <ion-img class="imagen"
+  src="https://cadif1.com/img/template/logo-cadif1.svg"
+  alt="logo Cadi"></ion-img>
+    </ion-toolbar>
+  </ion-header> -->
+  <div id="superContainer">
+    <div id="containerBackGround"></div>
+    <div class="contenedorPagination">
+      <div class="conTextPagination">
+        <div slot="content">Inicio</div>
+        <div class="contenedorIconFlecha">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671"/>
+          </svg>
+        </div>
+        <div slot="content">Carreras Tecnicas</div>
+        <div class="contenedorIconFlecha">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671"/>
+          </svg>
+        </div>
+        <div id="paginaActiva" slot="content">Programación BackEnd con PHP</div>
+      </div>
+    </div>
+    <div id="containerTitle">  
+      <ion-buttons slot="start">
+      <ion-button>
+        <div class="contenedorIconoT">
+          <img class="iconoTitle" src="https://cadif1.com/img/iconos/11.png">
+        </div>
+    </ion-button>
+    </ion-buttons>
+      <div class="contenedorTitleLetra">
+        <h2>Programación BackEnd con PHP</h2>
+      </div>
+    </div>
+    <div class="parrafoTitle" slot="content">Crear un BackEnd con PHP y bases de datos Mysql</div>
+  <div id="container2">
+    <ion-button class="botonAzul" expand="block">FECHAS DE INICIO</ion-button>
+    <div slot="content">No hay fechas planificadas</div>
+  </div>
+  <div id="container">
+    <ion-button class="botonAzul" expand="block">PENSUM DE ESTUDIO</ion-button>
+    <div  id="contenedorAcordion">
+      <ion-accordion-group>
+        <ion-accordion class="acordeon" value="first">
+          <ion-item slot="header" class="tituloAcordeon">
+            <ion-label class="tituloAcordeon">MODULO 1</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">PHP Nivel I</div>
+          <div class="ion-padding" slot="content">Fundamentos de Bases de Datos Nivel I</div>
+        </ion-accordion>
+        <ion-accordion class="acordeon" value="second">
+          <ion-item slot="header" class="tituloAcordeon">
+            <ion-label class="tituloAcordeon">MODULO 2</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">PHP Nivel II</div>
+          <div class="ion-padding" slot="content">Fundamentos de Bases de Datos Nivel II</div>
+        </ion-accordion>
+        <ion-accordion class="acordeon" value="third">
+          <ion-item slot="header" class="tituloAcordeon">
+            <ion-label class="tituloAcordeon">MODULO 3</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">PHP Nivel III</div>
+          <div class="ion-padding" slot="content">Mysql Nivel I</div>
+        </ion-accordion>
+        <ion-accordion class="acordeon" value="four">
+          <ion-item slot="header" class="tituloAcordeon">
+            <ion-label class="tituloAcordeon">MODULO 4</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">Laravel Nivel I</div>
+          <div class="ion-padding" slot="content">Servicios WEB en PHP Nivel I</div>
+        </ion-accordion>
+      </ion-accordion-group>
+    </div>
+  </div>
+  <div id="container3">
+    <ion-button class="botonNaranja">DESCARGAR PENSUM</ion-button>
+    <div class="conTextDescargar">
+      <div slot="content"><b>Nota: </b>El pensum de estudio puede cambiar sin previo aviso.</div>
+    </div>
+  </div>
+  <div class="containerInfo">
+    <div class="contenedorInfo">
+      <div class="imagenInfo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+          <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+        </svg>
+        <ion-text>
+          <h2>Informacion general</h2>
+        </ion-text>
+      </div>
+      <div>
+        <p>
+          Un BackEnd es la parte de una aplicación que le da respuestas a los distintos FrontEnds de una plataforma. El BackEnd no es visible para el usuario final y se puede programar en cualquier lenguaje del lado del servidor. Php es un lenguaje muy utilizado para crear páginas Web dinámicas. Como se ejecuta del lado del servidor, también es muy utilizado para crear un BackEnd que de soporte a los FrontEnd que lo requieran.
+        </p>
+      </div>
+    </div>
+    <div class="contenedorInfo">
+      <div class="imagenInfo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+          <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
+        </svg>
+        <ion-text>
+          <h2>Objetivo general</h2>
+        </ion-text>
+      </div>
+      <div>
+        <p>
+          Crear bases datos relacionales con MySQL, aprender a manipular los datos de una base de datos usando instrucciones SQL Crear el BackEnd de una aplicación Web utilizando el Framework Laravel, que implemente servicios Web que se conecte a una base de datos MySql, para publicar un API REST que pueda ser consumido por cualquier FrontEnd,
+        </p>
+      </div>
+    </div>
+    <div class="contenedorInfo">
+      <div class="imagenInfo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+          <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+        </svg>
+        <ion-text>
+          <h2>Inscripciones</h2>
+        </ion-text>
+      </div>
+      <div>
+        <p>
+          Las inscripciones se abren 30 dias antes del inicio y se cierran un dia antes o al agotarse los cupos.
+        </p>
+      </div>
+    </div>
+    <div class="contenedorInfo">
+      <div class="imagenInfo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+          <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
+        </svg>
+        <ion-text>
+          <h2 class="horarios">Horarios disponibles para las carreras tecnicas</h2>
+        </ion-text>
+      </div>
+      <div>
+       <ul>
+        <li>Mañana: de 7:15 am a 11:00 am</li>
+        <li>Medio dia: de 11:00 am a 2:45 pm</li>
+        <li>Tarde: de 2:45 pm a 6:30 pm</li>
+        <li>Noche: de 6:30 pm a 10:15 pm</li>
+       </ul>
+      </div>
+    </div> 
+    <div class="contenedorInfo">
+      <div class="imagenInfo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+          <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+        </svg>
+        <ion-text>
+          <h2>Certificado a obtener</h2>
+        </ion-text>
+      </div>
+      <div>
+        <p style="font-weight: bolder;">
+          Programador BackEnd con PHP
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+</ion-content>
+<ion-footer color="blue" collapse="fade">
+  <ion-toolbar>
+    <div id="containerFooter">
+    <div class="contenedorIconF">
+    <ion-img class="iconosFooter" src="https://cadif1.com/img/servicios/iconos/carrera-informaticas.png" alt="Programas de Desarrollo"></ion-img>
+    <ion-text style="color: white;">
+      <h3>Carreras</h3>
+    </ion-text>
+  </div>
+  <div class="contenedorIconF">
+    <ion-img class="iconosFooter" src="https://cadif1.com/img/servicios/iconos/cursos-presenciales.png" alt="Cursos Presenciales"></ion-img>
+    <ion-text style="color: white;">
+      <h3>Cursos</h3>
+    </ion-text>
+  </div>
+    <div class="contenedorIconF">
+    <ion-img class="iconosFooter"  src="https://cadif1.com/img/servicios/iconos/asesoria-tecnicas.png" alt="Asesorías Técnicas"></ion-img>
+    <ion-text style="color: white;">
+      <h3>Asesorias</h3>
+    </ion-text>
+  </div>
+    <div class="contenedorIconF">
+      <ion-img class="iconosFooter"  src="https://cadif1.com/img/servicios/iconos/alquiler-salones.png" alt="Alquiler de Salones"></ion-img>
+      <ion-text style="color: white;">
+        <h3>Salones</h3>
+      </ion-text>
+    </div>
+  </div>
+  </ion-toolbar>
+
+</ion-footer>
